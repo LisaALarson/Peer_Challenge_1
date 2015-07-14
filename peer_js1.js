@@ -9,43 +9,35 @@ if (value >= 53) {
 	value = value + 42;
 } else {
 	value = value-13;
-	console.log(value);	
 }
 
 //3. Create a string that is set to 11, add it to 'value'
 value = value + "11";
-console.log(value);
 
 //4. Create an array, loop through 'value' using charAt, set array[i] to each value
 var array = [];
 for (var i=0; i < value.length; i++) {
 	array.push(value.charAt(i));
-	console.log(array);
 }
 
 //5. Remove the first and last values off the array
 array.shift();
 array.pop();
-console.log(array);
 
 //6. Create a new variable. Loop backwards through the array and store each value into the 
 //new Variable, combining each of the values of that array (backwards remember!)
 var value2 = "";
 for (i=0; i<=array.length; i++){
 	value2 += array.pop(value.charAt(i));
-	console.log(value2);
 }
 
 //7. parseInt both the 'value' and the new variable created in Step 6, ensure that both 'value' 
 //and the new variable are set to these new parsed values;
 value = parseInt(value);
 value2 = parseInt(value2);
-console.log(value);
-console.log(value2);
 
 //8. Add 'value' and the new variable created in Step 6 together and store them in 'value'
 value = value + value2;
-console.log(value);
 
 //9. If the new value of 'value' is less than 60, set 'value' equal to 14. If not, 
 //check to see if it is equal to 2930, if it is, set 'value' equal to 27. 
@@ -59,7 +51,6 @@ else if (value=2930){
 else{
 	value = 2
 }
-console.log(value);
 
 //10. Create a while loop that counts down from 10 and increments 'value' by 1.
 i=10;
@@ -67,29 +58,31 @@ while(i>0){
 	value = value += 1;
 	i--;
 }
-console.log(value);
 
 //11. Create a function that accepts an argument 'val'. The function should convert 'val' to a String,
 // then drop the first character off the String, but only if there 
 //is more than 1 character in the String. Return 'val' and set the 'value' to the returned value.
 function elevenFunction(val){
+	value = value.toString();
 	if(value.length>1){
-		value = value.toString();
-		delete(charAt(0));		
+		
+		value = value.slice(1,value.length);
+		return value;
+			
 	}
 	else{
-		value = value.toString();
+		return value;
 	}
 
 }
-console.log(value);
 
 //12. Call the function.
+value = elevenFunction(value);
 
 
 //13. Console log value. Create an index.html file, link the this Javascript file. 
 //Load in the browser, check the value.
-
+console.log(value);
 
 //14. Your answer should be a String value that equals 7. Is that what you got?
 
